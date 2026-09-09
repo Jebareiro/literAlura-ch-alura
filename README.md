@@ -1,44 +1,54 @@
-# 📚 **Literalura - Challenge Alura Latam**
+# 📚 BookStore Global Catalog - Challenge Alura Latam (In Progress 🚧)
 
-Proyecto diseñado como un **Catálogo de Libros** interactivo que consume datos reales de la API **Gutendex**. El objetivo es permitir a los usuarios buscar libros por título, almacenarlos en una base de datos local y realizar consultas avanzadas sobre autores y obras registradas.
-
-Este desafío forma parte de la formación de **Alura Latam** (programa **Oracle Next Education**) y pone a prueba habilidades en consumo de APIs externas, persistencia de datos con **Spring Data JPA** y manejo de bases de datos relacionales.
-
----
-
-### 🚀 **Funcionalidades Principales**
-Nuestra aplicación de consola permite realizar las siguientes acciones de forma eficiente:
-
-* **Búsqueda Inteligente:** Localiza libros por su título consumiendo la API de Gutendex.
-* **Persistencia Automática:** Al buscar un libro, este se guarda automáticamente en la base de datos junto con su autor.
-* **Listado de Biblioteca:** Visualiza todos los libros que has registrado previamente.
-* **Consulta de Autores:** Lista todos los autores almacenados, incluyendo sus años de nacimiento y fallecimiento.
-* **Filtro Histórico:** Busca qué autores de tu base de datos estaban vivos en un año específico.
-* **Filtro por Idioma:** Consulta libros registrados según su código de idioma (es, en, fr, pt).
+> **Estado:** 🚧 *In Progress* / Proyecto en fase de unificación e integración de servicios.
+> 
+> **Programa:** Oracle Next Education (ONE) & Alura Latam  
+> **Especialidad:** ONE Tech Foundation G9 - Back End
 
 ---
 
-### 🛠️ **Tecnologías Utilizadas**
-* **Lenguaje:** Java 17 (Temurin)
-* **Framework:** Spring Boot 3.2.4
-* **Base de Datos:** PostgreSQL
-* **Persistencia:** Spring Data JPA & Hibernate
-* **Manejo de JSON:** Jackson
-* **Gestión de Dependencias:** Maven
-* **API Externa:** [Gutendex](https://gutendex.com/)
+## 📖 Descripción del Proyecto
+
+Este proyecto nace de la unificación e integración de dos desafíos del programa **ONE Tech Foundation G9 - Back End**: el *Conversor de Monedas* y *LiterAlura*.
+
+La aplicación está desarrollada en **Java 17** con **Spring Boot 3** y actúa como un sistema de **catálogo e internacionalización de literatura**. Permite consumir datos reales de obras y autores desde la API de [Gutendex](https://gutendex.com/), almacenarlos en una base de datos relacional PostgreSQL, e integrar la API de [ExchangeRate-API](https://www.exchangerate-api.com/) para calcular y mostrar el precio de los libros en múltiples divisas internacionales en tiempo real.
 
 ---
 
-### 📸 **Cómo usarlo**
-1. **Configuración:** Asegúrate de tener una base de datos llamada `literalura_db` en tu PostgreSQL.
-2. **Credenciales:** Configura tu usuario y contraseña en el archivo `application.properties`.
-3. **Ejecución:** Corre la aplicación desde tu IDE (IntelliJ IDEA).
-4. **Menú Interactivo:** Usa los números del **0 al 5** para navegar por las opciones:
-    * **Opción 1:** Busca un libro por título (ej: "Don Quijote" o "Pride and Prejudice").
-    * **Opción 2:** Lista todos los libros que ya guardaste.
-    * **Opción 4:** Ingresa un año para descubrir qué escritores vivían en esa época.
-    * **Opción 5:** Escribe el código del idioma (ej: `es` para español o `en` para inglés).
+## 🚀 Funcionalidades Principales
+
+- **🔍 Búsqueda y Persistencia Automática:** Localiza libros por su título consumiendo la API de Gutendex y registra automáticamente las obras junto con sus autores en PostgreSQL.
+- **💱 Precios Dinámicos Multidivisa (*In Progress*):** Conversión automática de precios a monedas locales (**USD, ARS, BRL, COP, PYG, EUR**) utilizando tasas de cambio en tiempo real.
+- **📚 Consultas e Historiales:**
+  - Listado completo de la biblioteca registrada.
+  - Filtro de autores vivos en un año específico.
+  - Consulta de libros por idioma (`es`, `en`, `fr`, `pt`).
+- **🔐 Gestión Segura de Credenciales:** Uso de variables de entorno y archivos de configuración para proteger credenciales de la base de datos y llaves de APIs.
 
 ---
 
-> ✨ Proyecto desarrollado como parte del programa **Oracle Next Education - ALURA LATAM**.
+## 🛠️ Tecnologías Utilizadas
+
+- **Lenguaje:** Java 17
+- **Framework:** Spring Boot 3.2.x
+- **Persistencia de Datos:** Spring Data JPA / Hibernate
+- **Base de Datos:** PostgreSQL
+- **Manejo de JSON / APIs:** Jackson
+- **APIs Externas Integradas:**
+  - [Gutendex API](https://gutendex.com/) *(Catálogo de libros)*
+  - [ExchangeRate-API](https://www.exchangerate-api.com/) *(Tasas de cambio)*
+- **Gestión de Dependencias:** Maven
+
+---
+
+## ⚙️ Requisitos e Instalación
+
+### Requisitos Previos
+- **Java 17** o superior.
+- **PostgreSQL** (puerto `5432`).
+- Una API Key válida de **ExchangeRate-API**.
+
+### Configuración
+1. Crear la base de datos en PostgreSQL:
+   ```sql
+   CREATE DATABASE literalura_db;
