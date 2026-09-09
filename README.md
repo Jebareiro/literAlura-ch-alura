@@ -1,7 +1,4 @@
-# 📚 BookStore Global Catalog - Challenge Alura Latam (In Progress 🚧)
-
-> **Estado:** 🚧 *In Progress* / Proyecto en fase de unificación e integración de servicios.
-> 
+# BookStore Global Catalog - Challenge Alura Latam (In Progress 🚧) 
 > **Programa:** Oracle Next Education (ONE) & Alura Latam  
 > **Especialidad:** ONE Tech Foundation G9 - Back End
 
