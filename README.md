@@ -1,4 +1,4 @@
-# BookStore Global Catalog - Challenge Alura Latam (In Progress 🚧) 
+# LiterAlura - Challenge Alura Latam (In Progress 🚧) 
 > **Programa:** Oracle Next Education (ONE) & Alura Latam  
 > **Especialidad:** ONE Tech Foundation G9 - Back End
 
